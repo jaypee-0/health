@@ -59,7 +59,7 @@ const TimelineComponent = () => {
             <>
                 {dataLength > 2 ? (
                     <div className="py-5">
-                        <Timeline lang="en" theme={customTheme} dateFormat="with-weekday" collapse withoutDay>
+                        {/* <Timeline lang="en" theme={customTheme} dateFormat="with-weekday" collapse withoutDay>
                             {drink &&
                                 drink.map(({ date, drinks, comments, time }: any, index:number) => {
                                     return (
@@ -84,7 +84,7 @@ const TimelineComponent = () => {
                                         </Container>
                                     );
                                 })}
-                        </Timeline>
+                        </Timeline> */}
                     </div>
                 ) : (
                     <div
