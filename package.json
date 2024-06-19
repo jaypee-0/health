@@ -37,7 +37,7 @@
     "sass": "^1.53.0",
     "sweetalert": "^2.1.2",
     "uuid": "^9.0.0",
-    "vertical-timeline-component-react": "^4.2.1"
+    "vertical-timeline-component-react": "^4.4.3"
   },
   "devDependencies": {
     "@types/node": "^18.11.2",
