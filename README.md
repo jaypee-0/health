@@ -5,10 +5,6 @@
   </h3>
 </div>
 
-<div align="center" style="margin-top: 20px;">
-   Code designed from <a href="https://www.figma.com/file/TLzbwfFWddunGdHJ5T7Yvc/HealthScribe?node-id=53%3A5035" target="_blank">Figma</a>.
-</div>
-
 <div align="center" style="margin-bottom: 20px">
   <h3>
     <a href="https://www.google.com/">
@@ -45,7 +41,5 @@
 
 ## Team
 
-- Abhinav | PM [linkedin](https://www.google.com/)
-- Mary | Designer [linkedin](https://www.google.com/)
-- Elisha | Dev [linkedin](https://www.google.com/)
+- Seth | Dev [linkedin](https://www.google.com/)
 - Jaypee | Dev [linkedin](https://www.google.com/)
