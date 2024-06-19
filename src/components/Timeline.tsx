@@ -1,5 +1,5 @@
 import { collection, onSnapshot, query, where } from "firebase/firestore";
-import { Timeline, Container, Content } from "vertical-timeline-component-react";
+//import { Timeline, Container, Content } from "vertical-timeline-component-react";
 import { useuserAuth } from "../context/UserAuth";
 import arrow from "../assets/icons/arrow.png";
 import { db } from "./Firebase";
