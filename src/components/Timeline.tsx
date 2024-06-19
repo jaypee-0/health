@@ -17,8 +17,8 @@ const TimelineComponent = () => {
         borderDotColor: "#d0cdc4",
         titleColor: "#405b73",
         subtitleColor: "#bf9765",
-        eventColor: '#965500',
-        descriptionColor: '#262626',
+        eventColor: "#965500",
+        descriptionColor: "#262626",
         textColor: "#262626"
     };
 
@@ -65,6 +65,30 @@ const TimelineComponent = () => {
                         <Timeline lang="en" theme={customTheme} dateFormat="with-weekday" collapse withoutDay>
                             {drink &&
                                 drink.map(({ date, drinks, comments, time }: any, index: number) => {
+                                    return (
+                                        <Events key={index} title="Drinks" startDate={date}>
+                                            <Event title={drinks[0] + " " + time} description={[comments]}></Event>
+                                        </Events>
+                                    );
+                                })}
+                            {meal &&
+                                meal.map(({ date, meals, comments, time }: any, index: number) => {
+                                    return (
+                                        <Events key={index} title="Meal" startDate={date}>
+                                            <Event title={meals[0] + " " + time} description={[comments]}></Event>
+                                        </Events>
+                                    );
+                                })}
+                            {medication &&
+                                medication.map(({ date, medications, comments, time }: any, index: number) => {
+                                    return (
+                                        <Events key={index} title="Medication" startDate={date}>
+                                            <Event title={medications[0] + " " + time} description={[comments]}></Event>
+                                        </Events>
+                                    );
+                                })}
+                            {/* {drink &&
+                                drink.map(({ date, drinks, comments, time }: any, index: number) => {
                                     return <Event key={index} title="Drinks" description={[comments]} />;
                                 })}
                             {meal &&
@@ -74,7 +98,7 @@ const TimelineComponent = () => {
                             {medication &&
                                 medication.map(({ date, medications, comments, time }: any, index: number) => {
                                     return <Event key={index} title="Medication" description={[comments]} />;
-                                })}
+                                })} */}
                         </Timeline>
                     </div>
                 ) : (
