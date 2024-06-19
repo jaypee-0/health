@@ -22,7 +22,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className='col-12 col-md-4 d-flex flex-column flex-md-row'>
-          <p className='mb-0'>Copywright 2022</p> <p><span className='mt-3 mt-md-0 ms-md-3'>healthscribe.netifly.com</span> </p>
+          <p className='mb-0'>Copywright 2024</p> <p><span className='mt-3 mt-md-0 ms-md-3'>healthscribe</span> </p>
         </div>
       </div>
     </div>
