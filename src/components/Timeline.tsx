@@ -1,5 +1,5 @@
 import { collection, onSnapshot, query, where } from "firebase/firestore";
-//import { Timeline, Container, Content } from "vertical-timeline-component-react";
+import { Timeline, Container, Content } from "vertical-timeline-component-react";
 import { useuserAuth } from "../context/UserAuth";
 import arrow from "../assets/icons/arrow.png";
 import { db } from "./Firebase";
@@ -28,7 +28,6 @@ const TimelineComponent = () => {
     const meal = data?.filter((item: any) => item).map((data: any) => data.meal);
     const medication = data?.filter((item: any) => item).map((data: any) => data.medication);
 
-    
     React.useEffect(() => {
         onSnapshot(q, (snapshot) => {
             snapshot.docs.forEach((item: any) => {
@@ -38,30 +37,29 @@ const TimelineComponent = () => {
     }, [id]);
 
     React.useEffect(() => {
-      setTimeout(() => {
-        setloading(false);
-      }, 3000);
+        setTimeout(() => {
+            setloading(false);
+        }, 3000);
     }, []);
-
 
     if (loading) {
         return (
-            <div style={{width: '100%', height: '80vh', display: 'flex', justifyContent: 'center', alignItems:"center"}}>
+            <div style={{ width: "100%", height: "80vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <div className="lds-ripple">
                     <div></div>
                     <div></div>
                 </div>
             </div>
         );
-      } else {
-        const dataLength = Object.values(data[0]).map((data:any) => data).length;
+    } else {
+        const dataLength = Object.values(data[0]).map((data: any) => data).length;
         return (
             <>
                 {dataLength > 2 ? (
                     <div className="py-5">
-                        {/* <Timeline lang="en" theme={customTheme} dateFormat="with-weekday" collapse withoutDay>
+                        <Timeline lang="en" theme={customTheme} dateFormat="with-weekday" collapse withoutDay>
                             {drink &&
-                                drink.map(({ date, drinks, comments, time }: any, index:number) => {
+                                drink.map(({ date, drinks, comments, time }: any, index: number) => {
                                     return (
                                         <Container key={index} title={"Drink"} startDate={date} today>
                                             <Content title={drinks[0] + " " + time} description={[comments]} />
@@ -69,7 +67,7 @@ const TimelineComponent = () => {
                                     );
                                 })}
                             {meal &&
-                                meal.map(({ date, meals, comments, time }: any, index:number) => {
+                                meal.map(({ date, meals, comments, time }: any, index: number) => {
                                     return (
                                         <Container key={index} title={"Meal"} startDate={date} today>
                                             <Content title={meals[0] + " " + time} description={[comments]} />
@@ -77,14 +75,14 @@ const TimelineComponent = () => {
                                     );
                                 })}
                             {medication &&
-                                medication.map(({ date, medications, comments, time }: any, index:number) => {
+                                medication.map(({ date, medications, comments, time }: any, index: number) => {
                                     return (
                                         <Container key={index} title={"Medication"} startDate={date} today>
                                             <Content title={medications[0] + " " + time} description={[comments]} />
                                         </Container>
                                     );
                                 })}
-                        </Timeline> */}
+                        </Timeline>
                     </div>
                 ) : (
                     <div
