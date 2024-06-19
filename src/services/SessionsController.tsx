@@ -5,8 +5,8 @@ const SIGNUP_URL = "/users";
 const LOGOUT_URL = "/oauth/revoke";
 const CURRENT_USER_URL = "users";
 
-const CLIENT_ID = '145893185256-ri0009ijfn3i97bjqs9gakn4r1uimamh.apps.googleusercontent.com';
-const CLIENT_SECRET = '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';
+const CLIENT_ID = '';
+const CLIENT_SECRET = '';
 
 export async function createUserWithEmailAndPassword(
   full_name: string,
